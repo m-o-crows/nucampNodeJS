@@ -34,23 +34,6 @@ partnerRouter
     next();
   })
   .get((req, res) => {
-    res.end("Will send all the partners to you");
-  })
-  .post((req, res) => {
-    res.end(
-      `Will add the partner: ${req.body.name} with description: ${req.body.description}`
-    );
-  })
-  .put((req, res) => {
-    res.statusCode = 403;
-    res.end(
-      `PUT operation not supported on partner: ${req.body.name} with description: ${req.body.description}`
-    );
-  })
-  .delete((req, res) => {
-    res.end("Deleting all partners");
-  })
-  .get((req, res) => {
     res.end(`Will send details of the partner: ${req.params.partnerId} to you`);
   })
   .post((req, res) => {

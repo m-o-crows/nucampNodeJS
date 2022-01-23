@@ -32,23 +32,6 @@ campsiteRouter
     next();
   })
   .get((req, res) => {
-    res.end("Will send all the campsites to you");
-  })
-  .post((req, res) => {
-    res.end(
-      `Will add the campsite: ${req.body.name} with description: ${req.body.description}`
-    );
-  })
-  .put((req, res) => {
-    res.statusCode = 403;
-    res.end(
-      `PUT operation not supported on ${req.body.name} with ${req.body.description}`
-    );
-  })
-  .delete((req, res) => {
-    res.end("Deleting all campsites");
-  })
-  .get((req, res) => {
     res.end(
       `Will send details of the campsite: ${req.params.campsiteId} to you`
     );
